@@ -52,7 +52,7 @@ router.post('/refresh', async (req, res, next) => {
     if (!user) {
       return next(new ExpressError(401, 'unauthorized'));
     }
-    if (user.tokenVersion !== payload.tokenVersion) {
+    if (user.tokenVersion !== payload.tokenVersion) {  // outdated user
       return next(new ExpressError(401, 'unauthorized'));
     }
     const accessToken = user.generateAccessToken();

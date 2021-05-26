@@ -14,9 +14,9 @@ const App = () => {
       try {
         const { data: user } = await axios.get('/auth/me');
         dispatch(setUser(user));
-        setLoading(false);
       } catch (error) {
         console.error(error);
+      } finally {
         setLoading(false);
       }
     };
