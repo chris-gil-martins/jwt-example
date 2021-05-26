@@ -1,0 +1,43 @@
+{
+  "name": "jwt-example",
+  "version": "2.0.0",
+  "description": "JWT authentication demo",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "build:dev": "npm run build -- --watch --mode=development",
+    "start": "node server",
+    "start:dev": "npm run build:dev & npm run start-server",
+    "start-server": "nodemon server -e html,js,scss --ignore public --ignore client"
+  },
+  "author": "Chris Gil Martins",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.9.1",
+    "pg": "^8.5.1",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/register": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "nodemon": "^1.19.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.1",
+    "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "webpack": "^5.15.0",
+    "webpack-cli": "^4.3.1"
+  }
+}
