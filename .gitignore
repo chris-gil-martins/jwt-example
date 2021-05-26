@@ -105,3 +105,7 @@ dist
 
 # macOS
 .DS_Store
+
+# webpack
+bundle.js
+bundle.js.map
